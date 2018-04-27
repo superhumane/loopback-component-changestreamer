@@ -16,6 +16,7 @@ interface Change {
 	meta: any
 	data: any
 	kind: UpdateKind
+	accessKey: string
 }
 
 // ChangeStreamerMiddleware is a core of the library
@@ -153,7 +154,8 @@ export class Middleware {
 			target,
 			where,
 			meta,
-			data
+			data,
+			accessKey: ctx.args.options && ctx.args.options.accessToken && ctx.args.options.accessToken.id,
 		};
 
 		// Notify clients about the change
