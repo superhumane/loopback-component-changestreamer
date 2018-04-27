@@ -48,6 +48,7 @@ class Middleware {
         res.setHeader('Cache-Control', 'no-cache');
         res.setHeader('Connection', 'keep-alive');
         res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader("X-Accel-Buffering", "no");
         // Response timout. The connection will be terminated from server side after this amount of time
         res.setTimeout(this.responseTimeout, null);
         // Set retry timeout for client (Browser) to connect to server after connection is lost ore closed
