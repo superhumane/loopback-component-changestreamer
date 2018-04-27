@@ -8,6 +8,7 @@
 	},
 	"scripts": {
 		"prepublish": "gulp",
+		"prepare": "gulp",
 		"pretest": "gulp",
 		"e2e": "./node_modules/.bin/mocha --timeout 30000 e2e/**/*test.js",
 		"e2e:debug": "npm run test -- --debug-brk",
