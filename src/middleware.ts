@@ -155,7 +155,7 @@ export class Middleware {
 			where,
 			meta,
 			data,
-			accessKey: ctx.args.options && ctx.args.options.accessToken && ctx.args.options.accessToken.id,
+			accessKey: ctx.options && ctx.options.accessToken && ctx.options.accessToken.id,
 		};
 
 		// Notify clients about the change
